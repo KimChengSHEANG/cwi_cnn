@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -J CWI_NN
+#SBATCH -t 0-8:00
+#SBATCH --nodes 1
+#SBATCH --cpus-per-task 2
+#SBATCH --ntasks 2
+#SBATCH --threads-per-core 1
+#SBATCH --mem=8G
+#SBATCH -o %N.%J.out # STDOUT
+#SBATCH -e %N.%J.err # STDERR
+#SBATCH --partition=medium
+
+##SBATCH --gres=gpu:1
+##SBATCH -C intel
+
+module load Python/3.6.4-foss-2017a
+module load CUDA/9.0.176
+module load zlib/1.2.9-foss-2017a
+##module load Tensorflow-gpu/1.12.0-foss-2017a-Python-3.6.4
+module load Tensorflow/1.12.0-foss-2017a-Python-3.6.4
+
+module load numpy/1.14.0-foss-2017a-Python-3.6.4
+module load NLTK/3.3.0-foss-2017a-Python-3.6.4
+module load scikit-learn/0.19.1-foss-2017a-Python-3.6.4
+
+
+
+cd $PWD
+python trains.py

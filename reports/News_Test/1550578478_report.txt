@@ -1,0 +1,40 @@
+              precision    recall  f1-score   support
+
+           0       0.92      0.87      0.89      1293
+           1       0.81      0.88      0.84       802
+
+   micro avg       0.87      0.87      0.87      2095
+   macro avg       0.86      0.87      0.87      2095
+weighted avg       0.88      0.87      0.87      2095
+
+Accuracy: 0.873
+f1 score: 0.840
+Precision: 0.807
+Recall: 0.877
+Mean absolute error: 0.127
+
+==============================================
+1550578478
+TRAIN_PATH = ./data/CWI 2018 Training Set/english/All_Train.tsv 
+DEV_PATH = ./data/CWI 2018 Training Set/english/All_Dev.tsv 
+TEST_PATH = ./data/CWI 2018 Test Set/english/News_Test.tsv 
+EMBEDDING_PATH = ~/upf/11_resources/dataset/glove/glove.6B.300d.txt 
+DEV_SAMPLE_PERCENTAGE = 0.1 
+MAX_SENTENCE_LENGTH = 600 
+MAX_TARGET_WORDS = 8 
+TEXT_EMBEDDING_DIM = 300 
+FILTER_SIZES = 3,4,5 
+NUM_FILTERS = 128 
+DROPOUT_KEEP_PROB = 0.75 
+L2_REG_LAMBDA = 1e-05 
+BATCH_SIZE = 256 
+NUM_EPOCHS = 100 
+DISPLAY_EVERY = 10 
+EVALUATE_EVERY = 20 
+NUM_CHECKPOINTS = 5 
+LEARNING_RATE = 0.01 
+DECAY_RATE = 0.9 
+CHECKPOINT_DIR =  
+ALLOW_SOFT_PLACEMENT = True 
+LOG_DEVICE_PLACEMENT = False 
+GPU_ALLOW_GROWTH = True 
